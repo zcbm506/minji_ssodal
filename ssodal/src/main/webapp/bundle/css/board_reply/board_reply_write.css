@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+#wrapper article #section_board_reply #board_reply_wrapper form {
+    position:relative;
+    width:700px;
+    margin:20px auto;
+    padding:30px;
+    border-radius:10px;
+    background-color:#e7e7e7;
+    box-shadow:0 1px 1px rgba(0,0,0,0.5);
+}
+#wrapper article #section_board_reply #board_reply_wrapper form ul li h3 {
+    font-size:20px; line-height:40px;
+}
+#wrapper article #section_board_reply #board_reply_wrapper form ul li  textarea {
+    width:90%; height:100px;
+    margin-left:5%;
+    font-size:16px; 
+    padding:10px;
+    border-radius:10px;
+}
+#wrapper article #section_board_reply #board_reply_wrapper form div#menu_wrapper { text-align:center; }
+#wrapper article #section_board_reply #board_reply_wrapper form input[type="submit"],
+#wrapper article #section_board_reply #board_reply_wrapper form input[type="button"],
+#wrapper article #section_board_reply #board_reply_wrapper form div#menu_wrapper input[type="reset"] {
+    display:inline-block;
+    width:100px; height:30px;
+    margin:10px 0;
+    line-height:26px; text-align:center; color:#b7b7b7;
+    border:2px solid #b7b7b7;
+    border-radius:5px;
+    background-color:transparent;
+    transition:all 0.3s ease-out;
+}
+#wrapper article #section_board_reply #board_reply_wrapper form #board_reply_star{
+	margin:10px 0 0 30px;
+}
+#wrapper article #section_board_reply #board_reply_wrapper form input[type="submit"]:hover,
+#wrapper article #section_board_reply #board_reply_wrapper form input[type="reset"]:hover,
+#wrapper article #section_board_reply #board_reply_wrapper form input[type="button"]:hover { color:#ffffff; background-color:#d7d7d7; }

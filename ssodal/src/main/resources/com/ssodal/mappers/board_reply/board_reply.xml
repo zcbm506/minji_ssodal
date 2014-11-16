@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="boardreply">
+	<select id="reply_list" resultType="boardreplyBean">
+		select * from board_reply order by board_reply_no desc
+	</select>
+	
+	<insert id="reply_write" parameterType="boardreplyBean">
+	insert into board_reply (board_reply_no, board_reply_name,board_reply_star, board_reply_content,board_reply_origin,board_reply_date)
+	values(board_reply_sequence.nextval, '조민지',#{board_reply_star},#{board_reply_content},1, sysdate)
+	</insert>
+</mapper>
