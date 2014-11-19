@@ -12,7 +12,7 @@ public interface BoardReplyDAO {
 
 	int totalCount(BoardReplyBean brb);
 
-	int avrstars(BoardReplyBean brb);
+	double avrstars(BoardReplyBean brb);
 
 	
 

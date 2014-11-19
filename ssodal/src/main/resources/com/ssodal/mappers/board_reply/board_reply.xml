@@ -15,7 +15,7 @@
 		select count(*) from board_reply
 	</select>
 	
-	<select id="average_stars" resultType="int">
+	<select id="average_stars" resultType="double">
 		select AVG(board_reply_star) from board_reply
 	</select>
 </mapper>

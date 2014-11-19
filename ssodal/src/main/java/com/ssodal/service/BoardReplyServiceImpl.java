@@ -32,7 +32,7 @@ public class BoardReplyServiceImpl implements BoardReplyService {
 	}
 
 	@Override
-	public int avrstars(BoardReplyBean brb) {
+	public double avrstars(BoardReplyBean brb) {
 		return boardreplyDAO.avrstars(brb);
 	}
 

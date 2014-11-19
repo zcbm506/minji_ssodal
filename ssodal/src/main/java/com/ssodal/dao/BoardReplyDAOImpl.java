@@ -34,7 +34,7 @@ public class BoardReplyDAOImpl implements BoardReplyDAO {
 	}
 
 	@Override
-	public int avrstars(BoardReplyBean brb) {
+	public double avrstars(BoardReplyBean brb) {
 		return sqlSession.selectOne("average_stars",brb);
 	}
 

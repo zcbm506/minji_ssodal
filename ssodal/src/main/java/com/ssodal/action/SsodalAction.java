@@ -155,10 +155,14 @@ public class SsodalAction {
 	public String board_reply_ok(@ModelAttribute BoardReplyBean brb,HttpServletRequest request, Model count){
 		
 		int totalCount=boardReplyService.totalCount(brb);
+		if(totalCount >= 10){
+			totalCount = 10;
+		}
 		count.addAttribute("totalCount",totalCount);
+	
+		double avrstars=boardReplyService.avrstars(brb);
 		
-		int avrstars=boardReplyService.avrstars(brb);
-		count.addAttribute("avrstars",avrstars);
+		count.addAttribute("avrstars", Math.round(avrstars*100.0)/100.0);
 		
 		return "board_reply/board_reply";
 		

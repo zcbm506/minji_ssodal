@@ -12,7 +12,7 @@ public interface BoardReplyService {
 
 	int totalCount(BoardReplyBean brb);
 
-	int avrstars(BoardReplyBean brb);
+	double avrstars(BoardReplyBean brb);
 
 	
 }
