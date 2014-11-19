@@ -25,6 +25,20 @@ public class BoardReplyDAOImpl implements BoardReplyDAO {
 		sqlSession.insert("reply_write",boardreplyBean);
 		
 	}
+
+	@Override
+	public int totalCount(BoardReplyBean brb) {
+		int count =0;
+		count = (int)sqlSession.selectOne("reply_count",brb);
+		return count;
+	}
+
+	@Override
+	public int avrstars(BoardReplyBean brb) {
+		return sqlSession.selectOne("average_stars",brb);
+	}
+
+	
 	
 	
 }

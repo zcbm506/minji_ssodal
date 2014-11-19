@@ -83,7 +83,6 @@ public class SsodalAction {
 	public void handlerPrivate(HttpServletRequest request,HttpServletResponse response) throws Exception {
 		
 		PrintWriter printWriter=response.getWriter();
-		
 		response.setContentType("text/html;charset=utf-8");
 		
 		String boardPassword=boardService.handlerPassword(Integer.parseInt(request.getParameter("board_no")));
@@ -145,6 +144,26 @@ public class SsodalAction {
 	/*------------------------- Board -------------------------*/
 
 	/*------------------------- Board Reply -------------------------*/
+	
+	@RequestMapping("board_reply")
+	public String board_reply(){
+		
+		return "board_reply/board_reply";
+	}
+	
+	@RequestMapping("board_reply_ok")
+	public String board_reply_ok(@ModelAttribute BoardReplyBean brb,HttpServletRequest request, Model count){
+		
+		int totalCount=boardReplyService.totalCount(brb);
+		count.addAttribute("totalCount",totalCount);
+		
+		int avrstars=boardReplyService.avrstars(brb);
+		count.addAttribute("avrstars",avrstars);
+		
+		return "board_reply/board_reply";
+		
+	}
+	/*------------------------- Board Reply Write-------------------------*/
 
 	@RequestMapping("board_reply_write")
 	public String board_reply_write(){
@@ -182,7 +201,6 @@ public class SsodalAction {
 		return mav;
 	}
 		 
-	
 	/*------------------------- Detail -------------------------*/
 	
 	/*------------------------- Detail -------------------------*/

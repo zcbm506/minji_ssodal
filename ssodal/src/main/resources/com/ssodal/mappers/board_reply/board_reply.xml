@@ -10,4 +10,12 @@
 	insert into board_reply (board_reply_no, board_reply_name,board_reply_star, board_reply_content,board_reply_origin,board_reply_date)
 	values(board_reply_sequence.nextval, '조민지',#{board_reply_star},#{board_reply_content},1, sysdate)
 	</insert>
+	
+	<select id="reply_count" resultType="int">
+		select count(*) from board_reply
+	</select>
+	
+	<select id="average_stars" resultType="int">
+		select AVG(board_reply_star) from board_reply
+	</select>
 </mapper>

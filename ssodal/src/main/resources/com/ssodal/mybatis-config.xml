@@ -5,9 +5,10 @@
 <configuration>
 
 	<typeAliases>
-		
+		<typeAlias alias="adminbean" type="com.ssodal.bean.AdminBean" />	
 		<typeAlias alias="boardBean" type="com.ssodal.bean.BoardBean" />
 		<typeAlias alias="boardreplyBean" type="com.ssodal.bean.BoardReplyBean" />
+	
 	</typeAliases>
 
 </configuration>

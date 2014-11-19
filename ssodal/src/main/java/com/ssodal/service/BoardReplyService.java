@@ -10,4 +10,9 @@ public interface BoardReplyService {
 
 	void BoardReplyWrite(BoardReplyBean boardreplyBean);
 
+	int totalCount(BoardReplyBean brb);
+
+	int avrstars(BoardReplyBean brb);
+
+	
 }

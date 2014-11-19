@@ -25,5 +25,18 @@ public class BoardReplyServiceImpl implements BoardReplyService {
 		boardreplyDAO.BoardReplyWrite(boardreplyBean);
 		
 	}
-	
+
+	@Override
+	public int totalCount(BoardReplyBean brb) {
+		return boardreplyDAO.totalCount(brb);
+	}
+
+	@Override
+	public int avrstars(BoardReplyBean brb) {
+		return boardreplyDAO.avrstars(brb);
+	}
+
+
+
+
 }

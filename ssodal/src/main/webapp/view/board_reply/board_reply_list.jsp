@@ -23,7 +23,7 @@
 
 						<c:if test="${!empty blist}">
 							<c:forEach var="b" items="${blist}">
-
+ 
 								<li>
 									<hgroup>
 										<h3 id="list_no">${b.board_reply_no}</h3>
