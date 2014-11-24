@@ -9,3 +9,5 @@ create table admin (
 
 
 select * from admin;
+
+drop table admin;

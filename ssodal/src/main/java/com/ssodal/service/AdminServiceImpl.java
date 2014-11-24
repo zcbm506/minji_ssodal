@@ -16,4 +16,9 @@ public class AdminServiceImpl implements AdminService {
 	public void insertAdmin(AdminBean adminbean) {
 		adminDAO.insertAdmin(adminbean);
 	}
+
+	@Override
+	public AdminBean adminLogin(String admin_id) {
+		return adminDAO.adminLogin(admin_id);
+	}
 }

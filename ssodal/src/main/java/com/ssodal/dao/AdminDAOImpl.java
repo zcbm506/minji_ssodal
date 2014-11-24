@@ -16,4 +16,9 @@ public class AdminDAOImpl implements AdminDAO {
 	public void insertAdmin(AdminBean adminbean) {
 		sqlSession.insert("admin_in",adminbean);
 	}
+
+	@Override
+	public AdminBean adminLogin(String admin_id) {
+		return sqlSession.selectOne("admin_login",admin_id);
+	}
 }

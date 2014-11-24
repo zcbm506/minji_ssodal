@@ -7,4 +7,8 @@
 	<insert id="admin_in" parameterType="adminbean">
 		 insert into admin (admin_no,admin_id,admin_pwd, admin_name, admin_date) values(1,#{admin_id},#{admin_pwd},'이름',sysdate)
 	</insert>
+	
+	<select id="admin_login" parameterType="String" resultType="adminbean">
+		select * from admin where admin_id=#{admin_id}
+	</select>
 </mapper>

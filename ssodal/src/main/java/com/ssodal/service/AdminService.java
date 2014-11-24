@@ -6,4 +6,6 @@ public interface AdminService {
 
 	void insertAdmin(AdminBean adminbean);
 
+	AdminBean adminLogin(String admin_id);
+
 }
